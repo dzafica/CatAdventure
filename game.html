@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Labirint - Cat Adventure</title>
+    <style>
+        canvas {
+            border: 2px solid #7caf8c;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* This ensures the div is perfectly centered */
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 4px solid rgb(124, 175, 140);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 484px;
+            position: relative;
+            color: rgb(232 180 102);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-div">
+        <!-- The canvas will be appended here by JavaScript -->
+    </div>
+    <script src="js/maze1.js"></script> <!-- Load your maze logic -->
+</body>
+
+</html>

@@ -2,7 +2,7 @@ body{
     margin: 0;
     overflow: hidden;
     position: relative;
-    background-image: url('../img/bg_start.gif');
+    /*background-image: url('../img/bg_start.gif');*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -55,16 +55,17 @@ h1{
 /*div for buttons */
 .button-container {
     display: flex;
-    padding-top: 10%;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    justify-content: center;
+    gap: 20px;
+    width: 100%; /* Make container take full width */
 }
 
 /* PLAY and HELP buttons */
 button {
-    width: 500px;  /* Button size */
-    height: 66px; /* Button size */
+    height: 100%;
+    width: 500px;
     border-radius: 10px; /* Make the buttons rounded */
     background-color: rgb(124, 175, 140); /* Button color */
     color: white;  /* Text color */
