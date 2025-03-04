@@ -64,480 +64,974 @@ const mazeWalls = [];
 function drawMaze() {
     ctx.beginPath();
 
-    ctx.moveTo(2, 2);
-    ctx.lineTo(226, 2);
+    ctx.moveTo(2, 2); ctx.lineTo(226, 2);
     mazeWalls.push({x1: 2, y1: 2, x2: 226, y2: 2});
 
-    ctx.moveTo(242, 2);
-    ctx.lineTo(482, 2);
+    ctx.moveTo(242, 2); ctx.lineTo(482, 2);
     mazeWalls.push({x1: 242, y1: 2, x2: 482, y2: 2});
 
-    ctx.moveTo(50, 18);
-    ctx.lineTo(82, 18);
+    ctx.moveTo(50, 18); ctx.lineTo(82, 18);
     mazeWalls.push({x1: 50, y1: 18, x2: 82, y2: 18});
 
-    ctx.moveTo(114, 18);
-    ctx.lineTo(130, 18);
+    ctx.moveTo(114, 18); ctx.lineTo(130, 18);
     mazeWalls.push({x1: 114, y1: 18, x2: 130, y2: 18});
 
-    ctx.moveTo(162, 18);
-    ctx.lineTo(178, 18);
+    ctx.moveTo(162, 18); ctx.lineTo(178, 18);
     mazeWalls.push({x1: 162, y1: 18, x2: 178, y2: 18});
 
-    ctx.moveTo(226, 18);
-    ctx.lineTo(242, 18);
+    ctx.moveTo(226, 18); ctx.lineTo(242, 18);
     mazeWalls.push({x1: 226, y1: 18, x2: 242, y2: 18});
 
-    ctx.moveTo(274, 18);
-    ctx.lineTo(290, 18);
-    ctx.moveTo(306, 18);
-    ctx.lineTo(354, 18);
-    ctx.moveTo(402, 18);
-    ctx.lineTo(418, 18);
-    ctx.moveTo(434, 18);
-    ctx.lineTo(450, 18);
-    ctx.moveTo(18, 34);
-    ctx.lineTo(50, 34);
-    ctx.moveTo(98, 34);
-    ctx.lineTo(114, 34);
-    ctx.moveTo(146, 34);
-    ctx.lineTo(226, 34);
-    ctx.moveTo(242, 34);
-    ctx.lineTo(274, 34);
-    ctx.moveTo(290, 34);
-    ctx.lineTo(306, 34);
-    ctx.moveTo(322, 34);
-    ctx.lineTo(370, 34);
-    ctx.moveTo(386, 34);
-    ctx.lineTo(402, 34);
-    ctx.moveTo(2, 50);
-    ctx.lineTo(82, 50);
-    ctx.moveTo(114, 50);
-    ctx.lineTo(146, 50);
-    ctx.moveTo(210, 50);
-    ctx.lineTo(258, 50);
-    ctx.moveTo(306, 50);
-    ctx.lineTo(322, 50);
+    ctx.moveTo(274, 18); ctx.lineTo(290, 18);
+    mazeWalls.push({x1: 274, y1: 18, x2: 290, y2: 18});
+
+    ctx.moveTo(306, 18); ctx.lineTo(354, 18);
+    mazeWalls.push({x1: 306, y1: 18, x2: 354, y2: 18});
+
+    ctx.moveTo(402, 18); ctx.lineTo(418, 18);
+    mazeWalls.push({x1: 402, y1: 18, x2: 418, y2: 18});
+
+    ctx.moveTo(434, 18); ctx.lineTo(450, 18);
+    mazeWalls.push({x1: 434, y1: 18, x2: 450, y2: 18});
+
+    ctx.moveTo(18, 34); ctx.lineTo(50, 34);
+    mazeWalls.push({x1: 18, y1: 34, x2: 50, y2: 34});
+
+    ctx.moveTo(98, 34); ctx.lineTo(114, 34);
+    mazeWalls.push({x1: 98, y1: 34, x2: 114, y2: 34});
+
+    ctx.moveTo(146, 34); ctx.lineTo(226, 34);
+    mazeWalls.push({x1: 98, y1: 34, x2: 114, y2: 34});
+
+    ctx.moveTo(242, 34); ctx.lineTo(274, 34);
+    mazeWalls.push({x1: 242, y1: 34, x2: 274, y2: 34});
+
+    ctx.moveTo(290, 34); ctx.lineTo(306, 34);
+    mazeWalls.push({x1: 290, y1: 34, x2: 306, y2: 34});
+
+    ctx.moveTo(322, 34); ctx.lineTo(370, 34);
+    mazeWalls.push({x1: 322, y1: 34, x2: 370, y2: 34});
+
+    ctx.moveTo(386, 34); ctx.lineTo(402, 34);
+    mazeWalls.push({x1: 386, y1: 34, x2: 402, y2: 34});
+
+    ctx.moveTo(2, 50); ctx.lineTo(82, 50);
+    mazeWalls.push({x1: 2, y1: 50, x2: 82, y2: 50});
+
+
+    //what i am doing here 
+    ctx.moveTo(114, 50); ctx.lineTo(146, 50);
+    mazeWalls.push({x1: 114, y1: 50, x2: 146, y2: 50});
+
+    ctx.moveTo(210, 50); ctx.lineTo(258, 50);
+    mazeWalls.push({x1: 210, y1: 50, x2: 258, y2: 50});
+
+    ctx.moveTo(306, 50); ctx.lineTo(322, 50);
+    mazeWalls.push({x1: 210, y1: 50, x2: 322, y2: 50});
+
+    //do the same here but w those coordinates
     ctx.moveTo(338, 50);
     ctx.lineTo(354, 50);
+    mazeWalls.push({x1: 338, y1: 50, x2: 354, y2: 50});
+
     ctx.moveTo(402, 50);
     ctx.lineTo(418, 50);
+    mazeWalls.push({x1: 402, y1: 50, x2: 418, y2: 50});
+
     ctx.moveTo(466, 50);
     ctx.lineTo(482, 50);
+    mazeWalls.push({x1: 466, y1: 50, x2: 482, y2: 50});
+
     ctx.moveTo(18, 66);
     ctx.lineTo(50, 66);
+    mazeWalls.push({x1: 18, y1: 66, x2: 50, y2: 66});
+
     ctx.moveTo(82, 66);
     ctx.lineTo(98, 66);
+    mazeWalls.push({x1: 82, y1: 66, x2: 98, y2: 66});
+
     ctx.moveTo(162, 66);
     ctx.lineTo(178, 66);
+    mazeWalls.push({x1: 162, y1: 66, x2: 178, y2: 66});
+
     ctx.moveTo(194, 66);
     ctx.lineTo(210, 66);
+    mazeWalls.push({x1: 194, y1: 66, x2: 210, y2: 66});
+
     ctx.moveTo(258, 66);
     ctx.lineTo(274, 66);
+    mazeWalls.push({x1: 258, y1: 66, x2: 274, y2: 66});
+
     ctx.moveTo(290, 66);
     ctx.lineTo(402, 66);
+    mazeWalls.push({x1: 290, y1: 66, x2: 402, y2: 66});
+
     ctx.moveTo(18, 82);
     ctx.lineTo(34, 82);
+    mazeWalls.push({x1: 18, y1: 82, x2: 34, y2: 82});
+
     ctx.moveTo(50, 82);
     ctx.lineTo(98, 82);
+    mazeWalls.push({x1: 50, y1: 82, x2: 98, y2: 82});
+
+    //here
+
     ctx.moveTo(130, 82);
     ctx.lineTo(162, 82);
+    mazeWalls.push({x1: 130, y1: 82, x2: 162, y2: 82});
+
     ctx.moveTo(178, 82);
     ctx.lineTo(210, 82);
+    mazeWalls.push({x1: 178, y1: 82, x2: 210, y2: 82});
+
     ctx.moveTo(306, 82);
     ctx.lineTo(322, 82);
+    mazeWalls.push({x1: 306, y1: 82, x2: 322, y2: 82});
+
     ctx.moveTo(354, 82);
     ctx.lineTo(386, 82);
+    mazeWalls.push({x1: 354, y1: 82, x2: 386, y2: 82});
+
     ctx.moveTo(402, 82);
     ctx.lineTo(466, 82);
+    mazeWalls.push({x1: 402, y1: 82, x2: 466, y2: 82});
+
     ctx.moveTo(34, 98);
     ctx.lineTo(98, 98);
+    mazeWalls.push({x1: 34, y1: 98, x2: 98, y2: 98});
+
     ctx.moveTo(114, 98);
     ctx.lineTo(130, 98);
+    mazeWalls.push({x1: 114, y1: 98, x2: 130, y2: 98});
+
     ctx.moveTo(162, 98);
     ctx.lineTo(178, 98);
+    mazeWalls.push({x1: 162, y1: 98, x2: 178, y2: 98});
+
     ctx.moveTo(258, 98);
     ctx.lineTo(290, 98);
+    mazeWalls.push({x1: 258, y1: 98, x2: 290, y2: 98});
+
+    // here 2
+
     ctx.moveTo(322, 98);
     ctx.lineTo(338, 98);
+    mazeWalls.push({x1: 322, y1: 98, x2: 338, y2: 98});
+
     ctx.moveTo(370, 98);
     ctx.lineTo(418, 98);
+    mazeWalls.push({x1: 370, y1: 98, x2: 418, y2: 98});
+
     ctx.moveTo(434, 98);
     ctx.lineTo(466, 98);
+    mazeWalls.push({x1: 434, y1: 98, x2: 466, y2: 98});
+
     ctx.moveTo(18, 114);
     ctx.lineTo(34, 114);
+    mazeWalls.push({x1: 18, y1: 114, x2: 34, y2: 114});
+
     ctx.moveTo(66, 114);
     ctx.lineTo(82, 114);
+    mazeWalls.push({x1: 66, y1: 114, x2: 82, y2: 114});
+
     ctx.moveTo(98, 114);
     ctx.lineTo(130, 114);
+    mazeWalls.push({x1: 98, y1: 114, x2: 130, y2: 114});
+
     ctx.moveTo(146, 114);
     ctx.lineTo(194, 114);
+    mazeWalls.push({x1: 146, y1: 114, x2: 194, y2: 114});
+
     ctx.moveTo(226, 114);
     ctx.lineTo(258, 114);
+    mazeWalls.push({x1: 226, y1: 114, x2: 258, y2: 114});
+
     ctx.moveTo(290, 114);
     ctx.lineTo(322, 114);
+    mazeWalls.push({x1: 290, y1: 114, x2: 322, y2: 114});
+
     ctx.moveTo(354, 114);
     ctx.lineTo(370, 114);
+    mazeWalls.push({x1: 354, y1: 114, x2: 370, y2: 114});
+
     ctx.moveTo(402, 114);
     ctx.lineTo(482, 114);
+    mazeWalls.push({x1: 402, y1: 114, x2: 482, y2: 114});
+
     ctx.moveTo(18, 130);
     ctx.lineTo(66, 130);
+    mazeWalls.push({x1: 18, y1: 130, x2: 66, y2: 130});
+
     ctx.moveTo(82, 130);
     ctx.lineTo(114, 130);
+    mazeWalls.push({x1: 82, y1: 130, x2: 114, y2: 130});
+
     ctx.moveTo(178, 130);
     ctx.lineTo(194, 130);
+    mazeWalls.push({x1: 178, y1: 130, x2: 194, y2: 130});
+
     ctx.moveTo(226, 130);
     ctx.lineTo(242, 130);
+    mazeWalls.push({x1: 226, y1: 130, x2: 242, y2: 130});
+
     ctx.moveTo(274, 130);
     ctx.lineTo(306, 130);
+    mazeWalls.push({x1: 274, y1: 130, x2: 306, y2: 130});
+
     ctx.moveTo(322, 130);
     ctx.lineTo(402, 130);
+    mazeWalls.push({x1: 322, y1: 130, x2: 402, y2: 130});
+
     ctx.moveTo(450, 130);
     ctx.lineTo(466, 130);
+    mazeWalls.push({x1: 450, y1: 130, x2: 466, y2: 130});
+
     ctx.moveTo(2, 146);
     ctx.lineTo(34, 146);
+    mazeWalls.push({x1: 2, y1: 146, x2: 34, y2: 146});
+
     ctx.moveTo(82, 146);
     ctx.lineTo(98, 146);
+    mazeWalls.push({x1: 82, y1: 146, x2: 98, y2: 146});
+
     ctx.moveTo(114, 146);
     ctx.lineTo(146, 146);
+    mazeWalls.push({x1: 114, y1: 146, x2: 146, y2: 146});
+
     ctx.moveTo(162, 146);
     ctx.lineTo(274, 146);
+    mazeWalls.push({x1: 162, y1: 146, x2: 274, y2: 146});
+
     ctx.moveTo(306, 146);
     ctx.lineTo(338, 146);
-    ctx.moveTo(386, 146);
-    ctx.lineTo(418, 146);
-    ctx.moveTo(34, 162);
-    ctx.lineTo(130, 162);
-    ctx.moveTo(146, 162);
-    ctx.lineTo(178, 162);
-    ctx.moveTo(210, 162);
-    ctx.lineTo(242, 162);
-    ctx.moveTo(322, 162);
-    ctx.lineTo(370, 162);
-    ctx.moveTo(386, 162);
-    ctx.lineTo(466, 162);
-    ctx.moveTo(18, 178);
-    ctx.lineTo(50, 178);
-    ctx.moveTo(130, 178);
-    ctx.lineTo(146, 178);
-    ctx.moveTo(178, 178);
-    ctx.lineTo(194, 178);
-    ctx.moveTo(226, 178);
-    ctx.lineTo(258, 178);
-    ctx.moveTo(306, 178);
-    ctx.lineTo(338, 178);
-    ctx.moveTo(354, 178);
-    ctx.lineTo(386, 178);
-    ctx.moveTo(402, 178);
-    ctx.lineTo(482, 178);
-    ctx.moveTo(2, 194);
-    ctx.lineTo(18, 194);
-    ctx.moveTo(34, 194);
-    ctx.lineTo(82, 194);
+    mazeWalls.push({x1: 306, y1: 146, x2: 338, y2: 146});
+
+    ctx.moveTo(386, 146); ctx.lineTo(418, 146);
+    mazeWalls.push({x1: 386, y1: 146, x2: 418, y2: 146});
+
+    ctx.moveTo(34, 162); ctx.lineTo(130, 162);
+    mazeWalls.push({x1: 34, y1: 162, x2: 130, y2: 162});
+
+    ctx.moveTo(146, 162); ctx.lineTo(178, 162);
+    mazeWalls.push({x1: 306, y1: 146, x2: 338, y2: 146});
+
+    ctx.moveTo(210, 162); ctx.lineTo(242, 162);
+    mazeWalls.push({x1: 210, y1: 162, x2: 242, y2: 162});
+
+    ctx.moveTo(322, 162); ctx.lineTo(370, 162);
+    mazeWalls.push({x1: 322, y1: 162, x2: 370, y2: 162});
+
+    ctx.moveTo(386, 162); ctx.lineTo(466, 162);
+    mazeWalls.push({x1: 386, y1: 162, x2: 466, y2: 162});
+
+    ctx.moveTo(18, 178); ctx.lineTo(50, 178);
+    mazeWalls.push({x1: 18, y1: 178, x2: 50, y2: 178});
+
+    ctx.moveTo(130, 178); ctx.lineTo(146, 178);
+    mazeWalls.push({x1: 130, y1: 178, x2: 346, y2: 178});
+
+    ctx.moveTo(178, 178); ctx.lineTo(194, 178);
+    mazeWalls.push({x1: 178, y1: 178, x2: 194, y2: 178});
+
+    ctx.moveTo(226, 178); ctx.lineTo(258, 178);
+    mazeWalls.push({x1: 226, y1: 178, x2: 258, y2: 178});
+
+    ctx.moveTo(306, 178); ctx.lineTo(338, 178);
+    mazeWalls.push({x1: 306, y1: 178, x2: 338, y2: 178});
+
+
+    ctx.moveTo(354, 178); ctx.lineTo(386, 178);
+    mazeWalls.push({x1: 354, y1: 178, x2: 386, y2: 178});
+
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    ctx.moveTo(402, 178); ctx.lineTo(482, 178);
+    mazeWalls.push({x1: 402, y1: 178, x2: 482, y2: 178});
+
+    ctx.moveTo(2, 194); ctx.lineTo(18, 194);
+    mazeWalls.push({x1: 2, y1: 194, x2: 18, y2: 194});
+
+    ctx.moveTo(34, 194); ctx.lineTo(82, 194);
+    mazeWalls.push({x1: 34, y1: 194, x2: 82, y2: 194});
+
     ctx.moveTo(130, 194);
     ctx.lineTo(178, 194);
+    mazeWalls.push({x1: 130, y1: 194, x2: 178, y2: 194});
+
     ctx.moveTo(194, 194);
     ctx.lineTo(226, 194);
+    mazeWalls.push({x1: 194, y1: 194, x2: 226, y2: 194});
+
     ctx.moveTo(290, 194);
     ctx.lineTo(306, 194);
+    mazeWalls.push({x1: 290, y1: 194, x2: 306, y2: 194});
+
     ctx.moveTo(338, 194);
     ctx.lineTo(370, 194);
+    mazeWalls.push({x1: 338, y1: 194, x2: 370, y2: 194});
+
     ctx.moveTo(386, 194);
     ctx.lineTo(418, 194);
+    mazeWalls.push({x1: 386, y1: 194, x2: 418, y2: 194});
+
     ctx.moveTo(50, 210);
     ctx.lineTo(66, 210);
+    mazeWalls.push({x1: 50, y1: 210, x2: 66, y2: 210});
+
     ctx.moveTo(146, 210);
     ctx.lineTo(162, 210);
+    mazeWalls.push({x1: 146, y1: 210, x2: 162, y2: 210});
+
     ctx.moveTo(178, 210);
     ctx.lineTo(194, 210);
+    mazeWalls.push({x1: 178, y1: 210, x2: 194, y2: 210});
+
     ctx.moveTo(226, 210);
     ctx.lineTo(242, 210);
+    mazeWalls.push({x1: 226, y1: 210, x2: 242, y2: 210});
+
     ctx.moveTo(306, 210);
     ctx.lineTo(338, 210);
+    mazeWalls.push({x1: 306, y1: 210, x2: 338, y2: 210});
+
     ctx.moveTo(434, 210);
     ctx.lineTo(482, 210);
+    mazeWalls.push({x1: 434, y1: 210, x2: 482, y2: 210});
+
     ctx.moveTo(18, 226);
     ctx.lineTo(50, 226);
+    mazeWalls.push({x1: 18, y1: 226, x2: 50, y2: 226});
+
     ctx.moveTo(66, 226);
     ctx.lineTo(178, 226);
+    mazeWalls.push({x1: 66, y1: 226, x2: 178, y2: 226});
+
     ctx.moveTo(194, 226);
     ctx.lineTo(258, 226);
+    mazeWalls.push({x1: 194, y1: 226, x2: 258, y2: 226});
+
     ctx.moveTo(290, 226);
     ctx.lineTo(322, 226);
+    mazeWalls.push({x1: 290, y1: 226, x2: 322, y2: 226});
+
     ctx.moveTo(338, 226);
     ctx.lineTo(386, 226);
+    mazeWalls.push({x1: 338, y1: 226, x2: 386, y2: 226});
+
+
     ctx.moveTo(418, 226);
     ctx.lineTo(434, 226);
+    mazeWalls.push({x1: 418, y1: 226, x2: 434, y2: 226});
+
     ctx.moveTo(450, 226);
     ctx.lineTo(466, 226);
+    mazeWalls.push({x1: 450, y1: 226, x2: 466, y2: 226});
+
     ctx.moveTo(82, 242);
     ctx.lineTo(114, 242);
+    mazeWalls.push({x1: 82, y1: 242, x2: 114, y2: 242});
+
     ctx.moveTo(146, 242);
     ctx.lineTo(162, 242);
+    mazeWalls.push({x1: 146, y1: 242, x2: 162, y2: 242});
+
     ctx.moveTo(226, 242);
     ctx.lineTo(290, 242);
+    mazeWalls.push({x1: 226, y1: 242, x2: 290, y2: 242});
+
     ctx.moveTo(322, 242);
     ctx.lineTo(450, 242);
+    mazeWalls.push({x1: 322, y1: 242, x2: 450, y2: 242});
+
     ctx.moveTo(34, 258);
     ctx.lineTo(66, 258);
+    mazeWalls.push({x1: 34, y1: 258, x2: 66, y2: 258});
+    //abc
+
     ctx.moveTo(114, 258);
     ctx.lineTo(130, 258);
+    mazeWalls.push({x1: 114, y1: 258, x2: 130, y2: 258});
+
     ctx.moveTo(162, 258);
     ctx.lineTo(194, 258);
+    mazeWalls.push({x1: 162, y1: 258, x2: 194, y2: 258});
+
     ctx.moveTo(210, 258);
     ctx.lineTo(258, 258);
+    mazeWalls.push({x1: 210, y1: 258, x2: 258, y2: 258});
+
     ctx.moveTo(306, 258);
     ctx.lineTo(322, 258);
+    mazeWalls.push({x1: 306, y1: 258, x2: 322, y2: 258});
+
     ctx.moveTo(338, 258);
     ctx.lineTo(354, 258);
+    mazeWalls.push({x1: 338, y1: 258, x2: 354, y2: 258});
+
     ctx.moveTo(370, 258);
     ctx.lineTo(386, 258);
+    mazeWalls.push({x1: 370, y1: 258, x2: 386, y2: 258});
+
     ctx.moveTo(402, 258);
     ctx.lineTo(466, 258);
+    mazeWalls.push({x1: 402, y1: 258, x2: 466, y2: 258});
+
     ctx.moveTo(2, 274);
     ctx.lineTo(34, 274);
+    mazeWalls.push({x1: 2, y1: 274, x2: 34, y2: 274});
+
     ctx.moveTo(82, 274);
     ctx.lineTo(114, 274);
+    mazeWalls.push({x1: 82, y1: 274, x2: 114, y2: 274});
+
     ctx.moveTo(146, 274);
     ctx.lineTo(178, 274);
+    mazeWalls.push({x1: 146, y1: 274, x2: 178, y2: 274});
+
     ctx.moveTo(210, 274);
     ctx.lineTo(226, 274);
+    mazeWalls.push({x1: 210, y1: 274, x2: 226, y2: 274});
+
     ctx.moveTo(242, 274);
     ctx.lineTo(290, 274);
+    mazeWalls.push({x1: 242, y1: 274, x2: 290, y2: 274});
+
     ctx.moveTo(306, 274);
     ctx.lineTo(370, 274);
+    mazeWalls.push({x1: 306, y1: 274, x2: 370, y2: 274});
+
     ctx.moveTo(402, 274);
     ctx.lineTo(418, 274);
+    mazeWalls.push({x1: 402, y1: 274, x2: 418, y2: 274});
+
     ctx.moveTo(434, 274);
     ctx.lineTo(466, 274);
+    mazeWalls.push({x1: 434, y1: 274, x2: 466, y2: 274});
 
-    ctx.moveTo(34, 290); ctx.lineTo(130, 290);
-    ctx.moveTo(146, 290); ctx.lineTo(162, 290);
-    ctx.moveTo(210, 290); ctx.lineTo(226, 290);
-    ctx.moveTo(242, 290); ctx.lineTo(290, 290);
-    ctx.moveTo(306, 290); ctx.lineTo(338, 290);
-    ctx.moveTo(370, 290); ctx.lineTo(386, 290);
-    ctx.moveTo(2, 306); ctx.lineTo(18, 306);
-    ctx.moveTo(82, 306); ctx.lineTo(98, 306);
-    ctx.moveTo(130, 306); ctx.lineTo(146, 306);
-    ctx.moveTo(162, 306); ctx.lineTo(210, 306);
-    ctx.moveTo(226, 306); ctx.lineTo(258, 306);
-    ctx.moveTo(290, 306); ctx.lineTo(306, 306);
-    ctx.moveTo(338, 306); ctx.lineTo(354, 306);
-    ctx.moveTo(370, 306); ctx.lineTo(402, 306);
-    ctx.moveTo(18, 322); ctx.lineTo(34, 322);
-    ctx.moveTo(50, 322); ctx.lineTo(82, 322);
-    ctx.moveTo(98, 322); ctx.lineTo(130, 322);
-    ctx.moveTo(146, 322); ctx.lineTo(162, 322);
-    ctx.moveTo(194, 322); ctx.lineTo(226, 322);
-    ctx.moveTo(258, 322); ctx.lineTo(338, 322);
-    ctx.moveTo(354, 322); ctx.lineTo(402, 322);
-    ctx.moveTo(434, 322); ctx.lineTo(450, 322);
-    ctx.moveTo(18, 338); ctx.lineTo(34, 338);
-    ctx.moveTo(82, 338); ctx.lineTo(98, 338);
-    ctx.moveTo(130, 338); ctx.lineTo(162, 338);
-    ctx.moveTo(178, 338); ctx.lineTo(258, 338);
-    ctx.moveTo(306, 338); ctx.lineTo(386, 338);
-    ctx.moveTo(450, 338); ctx.lineTo(482, 338);
-    ctx.moveTo(66, 354); ctx.lineTo(146, 354);
-    ctx.moveTo(162, 354); ctx.lineTo(194, 354);
-    ctx.moveTo(226, 354); ctx.lineTo(290, 354);
-    ctx.moveTo(322, 354); ctx.lineTo(354, 354);
-    ctx.moveTo(370, 354); ctx.lineTo(386, 354);
-    ctx.moveTo(450, 354); ctx.lineTo(466, 354);
-    ctx.moveTo(2, 370); ctx.lineTo(18, 370);
-    ctx.moveTo(34, 370); ctx.lineTo(50, 370);
-    ctx.moveTo(82, 370); ctx.lineTo(98, 370);
-    ctx.moveTo(114, 370); ctx.lineTo(130, 370);
-    ctx.moveTo(146, 370); ctx.lineTo(162, 370);
-    ctx.moveTo(178, 370); ctx.lineTo(210, 370);
-    ctx.moveTo(258, 370); ctx.lineTo(274, 370);
-    ctx.moveTo(290, 370); ctx.lineTo(338, 370);
-    ctx.moveTo(386, 370); ctx.lineTo(402, 370);
-    ctx.moveTo(418, 370); ctx.lineTo(450, 370);
-    ctx.moveTo(466, 370); ctx.lineTo(482, 370);
-    ctx.moveTo(18, 386); ctx.lineTo(34, 386);
-    ctx.moveTo(50, 386); ctx.lineTo(82, 386);
-    ctx.moveTo(98, 386); ctx.lineTo(114, 386);
-    ctx.moveTo(130, 386); ctx.lineTo(146, 386);
-    ctx.moveTo(162, 386); ctx.lineTo(178, 386);
-    ctx.moveTo(194, 386); ctx.lineTo(226, 386);
-    ctx.moveTo(274, 386); ctx.lineTo(290, 386);
-    ctx.moveTo(338, 386); ctx.lineTo(354, 386);
-    ctx.moveTo(370, 386); ctx.lineTo(434, 386);
-    ctx.moveTo(450, 386); ctx.lineTo(466, 386);
-    ctx.moveTo(66, 402); ctx.lineTo(130, 402);
-    ctx.moveTo(178, 402); ctx.lineTo(194, 402);
-    ctx.moveTo(258, 402); ctx.lineTo(290, 402);
-    ctx.moveTo(306, 402); ctx.lineTo(322, 402);
-    ctx.moveTo(370, 402); ctx.lineTo(418, 402);
-    ctx.moveTo(434, 402); ctx.lineTo(450, 402);
-    ctx.moveTo(2, 418); ctx.lineTo(34, 418);
-    ctx.moveTo(66, 418); ctx.lineTo(98, 418);
-    ctx.moveTo(130, 418); ctx.lineTo(162, 418);
-    ctx.moveTo(178, 418); ctx.lineTo(194, 418);
-    ctx.moveTo(226, 418); ctx.lineTo(258, 418);
-    ctx.moveTo(274, 418); ctx.lineTo(290, 418);
-    ctx.moveTo(322, 418); ctx.lineTo(338, 418);
-    ctx.moveTo(354, 418); ctx.lineTo(402, 418);
-    ctx.moveTo(434, 418); ctx.lineTo(466, 418);
-    ctx.moveTo(18, 434); ctx.lineTo(50, 434);
-    ctx.moveTo(98, 434); ctx.lineTo(114, 434);
-    ctx.moveTo(146, 434); ctx.lineTo(178, 434);
-    ctx.moveTo(194, 434); ctx.lineTo(226, 434);
-    ctx.moveTo(290, 434); ctx.lineTo(322, 434);
-    ctx.moveTo(402, 434); ctx.lineTo(418, 434);
-    ctx.moveTo(2, 450); ctx.lineTo(18, 450);
-    ctx.moveTo(50, 450); ctx.lineTo(66, 450);
-    ctx.moveTo(98, 450); ctx.lineTo(114, 450);
-    ctx.moveTo(130, 450); ctx.lineTo(162, 450);
-    ctx.moveTo(178, 450); ctx.lineTo(194, 450);
-    ctx.moveTo(226, 450); ctx.lineTo(242, 450);
-    ctx.moveTo(274, 450); ctx.lineTo(290, 450);
-    ctx.moveTo(354, 450); ctx.lineTo(402, 450);
-    ctx.moveTo(418, 450); ctx.lineTo(466, 450);
-    ctx.moveTo(18, 466); ctx.lineTo(50, 466);
-    ctx.moveTo(82, 466); ctx.lineTo(130, 466);
-    ctx.moveTo(162, 466); ctx.lineTo(178, 466);
-    ctx.moveTo(242, 466); ctx.lineTo(274, 466);
-    ctx.moveTo(290, 466); ctx.lineTo(322, 466);
-    ctx.moveTo(354, 466); ctx.lineTo(370, 466);
-    ctx.moveTo(402, 466); ctx.lineTo(450, 466);
-    ctx.moveTo(466, 466); ctx.lineTo(482, 466);
-    ctx.moveTo(2, 482); ctx.lineTo(242, 482);
-    ctx.moveTo(258, 482); ctx.lineTo(482, 482);
+    //cde
 
+    ctx.moveTo(34, 290);
+    ctx.lineTo(130, 290);
+    mazeWalls.push({x1: 34, y1: 290, x2: 130, y2: 290});
 
-    ctx.moveTo(2, 2);
-    ctx.lineTo(2, 482);
+    ctx.moveTo(146, 290);
+    ctx.lineTo(162, 290);
+    mazeWalls.push({x1: 146, y1: 290, x2: 162, y2: 290});
 
-    // <line x1="18" y1="18" x2="18" y2="34" />
-    ctx.moveTo(18, 18);
-    ctx.lineTo(18, 34);
+    ctx.moveTo(210, 290);
+    ctx.lineTo(226, 290);
+    mazeWalls.push({x1: 210, y1: 290, x2: 226, y2: 290});
 
-    // <line x1="18" y1="82" x2="18" y2="130" />
-    ctx.moveTo(18, 82);
-    ctx.lineTo(18, 130);
+    ctx.moveTo(242, 290);
+    ctx.lineTo(290, 290);
+    mazeWalls.push({x1: 242, y1: 290, x2: 290, y2: 290});
 
-    // <line x1="18" y1="162" x2="18" y2="178" />
-    ctx.moveTo(18, 162);
-    ctx.lineTo(18, 178);
+    ctx.moveTo(306, 290);
+    ctx.lineTo(338, 290);
+    mazeWalls.push({x1: 306, y1: 290, x2: 338, y2: 290});
 
-    // <line x1="18" y1="194" x2="18" y2="226" />
-    ctx.moveTo(18, 194);
-    ctx.lineTo(18, 226);
+    ctx.moveTo(370, 290);
+    ctx.lineTo(386, 290);
+    mazeWalls.push({x1: 370, y1: 290, x2: 386, y2: 290});
 
-    // <line x1="18" y1="242" x2="18" y2="274" />
-    ctx.moveTo(18, 242);
-    ctx.lineTo(18, 274);
-
-    // <line x1="18" y1="290" x2="18" y2="306" />
-    ctx.moveTo(18, 290);
+    ctx.moveTo(2, 306);
     ctx.lineTo(18, 306);
+    mazeWalls.push({x1: 2, y1: 306, x2: 18, y2: 306});
 
-    // <line x1="18" y1="338" x2="18" y2="370" />
-    ctx.moveTo(18, 338);
-    ctx.lineTo(18, 370);
+    ctx.moveTo(82, 306);
+    ctx.lineTo(98, 306);
+    mazeWalls.push({x1: 82, y1: 306, x2: 98, y2: 306});
 
-    // <line x1="18" y1="386" x2="18" y2="402" />
-    ctx.moveTo(18, 386);
-    ctx.lineTo(18, 402);
+    ctx.moveTo(130, 306);
+    ctx.lineTo(146, 306);
+    mazeWalls.push({x1: 130, y1: 306, x2: 146, y2: 306});
 
-    // <line x1="34" y1="2" x2="34" y2="18" />
-    ctx.moveTo(34, 2);
-    ctx.lineTo(34, 18);
+    ctx.moveTo(162, 306);
+    ctx.lineTo(210, 306);
+    mazeWalls.push({x1: 162, y1: 306, x2: 210, y2: 306});
 
-    // <line x1="34" y1="66" x2="34" y2="82" />
-    ctx.moveTo(34, 66);
-    ctx.lineTo(34, 82);
+    ctx.moveTo(226, 306);
+    ctx.lineTo(258, 306);
+    mazeWalls.push({x1: 226, y1: 306, x2: 258, y2: 306});
 
-    // <line x1="34" y1="146" x2="34" y2="162" />
-    ctx.moveTo(34, 146);
-    ctx.lineTo(34, 162);
+    ctx.moveTo(290, 306);
+    ctx.lineTo(306, 306);
+    mazeWalls.push({x1: 290, y1: 306, x2: 306, y2: 306});
 
-    // <line x1="34" y1="178" x2="34" y2="210" />
-    ctx.moveTo(34, 178);
-    ctx.lineTo(34, 210);
+    ctx.moveTo(338, 306);
+    ctx.lineTo(354, 306);
+    mazeWalls.push({x1: 338, y1: 306, x2: 354, y2: 306});
 
-    // <line x1="34" y1="242" x2="34" y2="258" />
-    ctx.moveTo(34, 242);
-    ctx.lineTo(34, 258);
+    ctx.moveTo(370, 306);
+    ctx.lineTo(402, 306);
+    mazeWalls.push({x1: 370, y1: 306, x2: 402, y2: 306});
 
-    // <line x1="34" y1="274" x2="34" y2="322" />
-    ctx.moveTo(34, 274);
+    ctx.moveTo(18, 322);
     ctx.lineTo(34, 322);
+    mazeWalls.push({x1: 18, y1: 322, x2: 34, y2: 322});
 
-    // <line x1="34" y1="354" x2="34" y2="386" />
-    ctx.moveTo(34, 354);
-    ctx.lineTo(34, 386);
+    ctx.moveTo(50, 322);
+    ctx.lineTo(82, 322);
+    mazeWalls.push({x1: 50, y1: 322, x2: 82, y2: 322});
 
-    // <line x1="34" y1="402" x2="34" y2="418" />
-    ctx.moveTo(34, 402);
-    ctx.lineTo(34, 418);
+    ctx.moveTo(98, 322);
+    ctx.lineTo(130, 322);
+    mazeWalls.push({x1: 98, y1: 322, x2: 130, y2: 322});
 
-    // <line x1="34" y1="434" x2="34" y2="466" />
-    ctx.moveTo(34, 434);
-    ctx.lineTo(34, 466);
+    ctx.moveTo(146, 322);
+    ctx.lineTo(162, 322);
+    mazeWalls.push({x1: 146, y1: 322, x2: 162, y2: 322});
 
-    // <line x1="50" y1="18" x2="50" y2="34" />
-    ctx.moveTo(50, 18);
-    ctx.lineTo(50, 34);
+    ctx.moveTo(194, 322);
+    ctx.lineTo(226, 322);
+    mazeWalls.push({x1: 194, y1: 322, x2: 226, y2: 322});
 
-    // <line x1="50" y1="82" x2="50" y2="114" />
-    ctx.moveTo(50, 82);
-    ctx.lineTo(50, 114);
+    ctx.moveTo(258, 322);
+    ctx.lineTo(338, 322);
+    mazeWalls.push({x1: 258, y1: 322, x2: 338, y2: 322});
 
-    // <line x1="50" y1="130" x2="50" y2="146" />
-    ctx.moveTo(50, 130);
-    ctx.lineTo(50, 146);
+    ctx.moveTo(354, 322);
+    ctx.lineTo(402, 322);
+    mazeWalls.push({x1: 354, y1: 322, x2: 402, y2: 322});
 
-    // <line x1="50" y1="210" x2="50" y2="242" />
-    ctx.moveTo(50, 210);
-    ctx.lineTo(50, 242);
+    ctx.moveTo(434, 322);
+    ctx.lineTo(450, 322);
+    mazeWalls.push({x1: 434, y1: 322, x2: 450, y2: 322});
 
-    // <line x1="50" y1="258" x2="50" y2="274" />
-    ctx.moveTo(50, 258);
-    ctx.lineTo(50, 274);
+    ctx.moveTo(18, 338);
+    ctx.lineTo(34, 338);
+    mazeWalls.push({x1: 18, y1: 338, x2: 34, y2: 338});
 
-    // <line x1="50" y1="306" x2="50" y2="370" />
-    ctx.moveTo(50, 306);
+    ctx.moveTo(82, 338);
+    ctx.lineTo(98, 338);
+    mazeWalls.push({x1: 82, y1: 338, x2: 98, y2: 338});
+
+    ctx.moveTo(130, 338);
+    ctx.lineTo(162, 338);
+    mazeWalls.push({x1: 130, y1: 338, x2: 162, y2: 338});
+
+    ctx.moveTo(178, 338);
+    ctx.lineTo(258, 338);
+    mazeWalls.push({x1: 178, y1: 338, x2: 258, y2: 338});
+
+    ctx.moveTo(306, 338);
+    ctx.lineTo(386, 338);
+    mazeWalls.push({x1: 306, y1: 338, x2: 386, y2: 338});
+
+    ctx.moveTo(450, 338);
+    ctx.lineTo(482, 338);
+    mazeWalls.push({x1: 450, y1: 338, x2: 482, y2: 338});
+
+    ctx.moveTo(66, 354);
+    ctx.lineTo(146, 354);
+    mazeWalls.push({x1: 66, y1: 354, x2: 146, y2: 354});
+
+    ctx.moveTo(162, 354);
+    ctx.lineTo(194, 354);
+    mazeWalls.push({x1: 162, y1: 354, x2: 194, y2: 354});
+
+    ctx.moveTo(226, 354);
+    ctx.lineTo(290, 354);
+    mazeWalls.push({x1: 226, y1: 354, x2: 290, y2: 354});
+
+    ctx.moveTo(322, 354);
+    ctx.lineTo(354, 354);
+    mazeWalls.push({x1: 322, y1: 354, x2: 354, y2: 354});
+
+    ctx.moveTo(370, 354);
+    ctx.lineTo(386, 354);
+    mazeWalls.push({x1: 370, y1: 354, x2: 386, y2: 354});
+
+    ctx.moveTo(450, 354);
+    ctx.lineTo(466, 354);
+    mazeWalls.push({x1: 450, y1: 354, x2: 466, y2: 354});
+    
+    //here lol
+    ctx.moveTo(2, 370);
+    ctx.lineTo(18, 370);
+    mazeWalls.push({x1: 2, y1: 370, x2: 18, y2: 370});
+
+    ctx.moveTo(34, 370);
     ctx.lineTo(50, 370);
+    mazeWalls.push({x1: 34, y1: 370, x2: 50, y2: 370});
 
-    // <line x1="50" y1="386" x2="50" y2="434" />
+    ctx.moveTo(82, 370);
+    ctx.lineTo(98, 370);
+    mazeWalls.push({x1: 82, y1: 370, x2: 98, y2: 370});
+
+    ctx.moveTo(114, 370);
+    ctx.lineTo(130, 370);
+    mazeWalls.push({x1: 114, y1: 370, x2: 130, y2: 370});
+
+    ctx.moveTo(146, 370);
+    ctx.lineTo(162, 370);
+    mazeWalls.push({x1: 146, y1: 370, x2: 162, y2: 370});
+
+    ctx.moveTo(178, 370);
+    ctx.lineTo(210, 370);
+    mazeWalls.push({x1: 178, y1: 370, x2: 210, y2: 370});
+
+    ctx.moveTo(258, 370);
+    ctx.lineTo(274, 370);
+    mazeWalls.push({x1: 258, y1: 370, x2: 274, y2: 370});
+
+    ctx.moveTo(290, 370);
+    ctx.lineTo(338, 370);
+    mazeWalls.push({x1: 290, y1: 370, x2: 338, y2: 370});
+
+    ctx.moveTo(386, 370);
+    ctx.lineTo(402, 370);
+    mazeWalls.push({x1: 386, y1: 370, x2: 402, y2: 370});
+
+    ctx.moveTo(418, 370);
+    ctx.lineTo(450, 370);
+    mazeWalls.push({x1: 418, y1: 370, x2: 450, y2: 370});
+
+    ctx.moveTo(466, 370);
+    ctx.lineTo(482, 370);
+    mazeWalls.push({x1: 466, y1: 370, x2: 482, y2: 370});
+
+    ctx.moveTo(18, 386);
+    ctx.lineTo(34, 386);
+    mazeWalls.push({x1: 18, y1: 386, x2: 34, y2: 386});
+
     ctx.moveTo(50, 386);
-    ctx.lineTo(50, 434);
+    ctx.lineTo(82, 386);
+    mazeWalls.push({x1: 50, y1: 386, x2: 82, y2: 386});
 
-    // <line x1="66" y1="34" x2="66" y2="82" />
-    ctx.moveTo(66, 34);
-    ctx.lineTo(66, 82);
+    ctx.moveTo(98, 386);
+    ctx.lineTo(114, 386);
+    mazeWalls.push({x1: 98, y1: 386, x2: 114, y2: 386});
 
-    // <line x1="66" y1="114" x2="66" y2="162" />
-    ctx.moveTo(66, 114);
-    ctx.lineTo(66, 162);
+    ctx.moveTo(130, 386);
+    ctx.lineTo(146, 386);
+    mazeWalls.push({x1: 130, y1: 386, x2: 146, y2: 386});
 
-    // <line x1="66" y1="178" x2="66" y2="194" />
-    ctx.moveTo(66, 178);
-    ctx.lineTo(66, 194);
+    ctx.moveTo(162, 386);
+    ctx.lineTo(178, 386);
+    mazeWalls.push({x1: 162, y1: 386, x2: 178, y2: 386});
 
-    // <line x1="66" y1="226" x2="66" y2="258" />
-    ctx.moveTo(66, 226);
-    ctx.lineTo(66, 258);
+    ctx.moveTo(194, 386);
+    ctx.lineTo(226, 386);
+    mazeWalls.push({x1: 194, y1: 386, x2: 226, y2: 386});
 
-    // <line x1="66" y1="274" x2="66" y2="322" />
-    ctx.moveTo(66, 274);
-    ctx.lineTo(66, 322);
+    ctx.moveTo(274, 386);
+    ctx.lineTo(290, 386);
+    mazeWalls.push({x1: 274, y1: 386, x2: 290, y2: 386});
 
-    // <line x1="66" y1="338" x2="66" y2="386" />
-    ctx.moveTo(66, 338);
-    ctx.lineTo(66, 386);
+    ctx.moveTo(338, 386);
+    ctx.lineTo(354, 386);
+    mazeWalls.push({x1: 338, y1: 386, x2: 354, y2: 386});
 
-    // <line x1="66" y1="418" x2="66" y2="482" />
+    ctx.moveTo(370, 386);
+    ctx.lineTo(434, 386);
+    mazeWalls.push({x1: 370, y1: 386, x2: 434, y2: 386});
+
+    ctx.moveTo(450, 386);
+    ctx.lineTo(466, 386);
+    mazeWalls.push({x1: 450, y1: 386, x2: 466, y2: 386});
+
+    ctx.moveTo(66, 402);
+    ctx.lineTo(130, 402);
+    mazeWalls.push({x1: 66, y1: 402, x2: 130, y2: 402});
+
+    ctx.moveTo(178, 402);
+    ctx.lineTo(194, 402);
+    mazeWalls.push({x1: 178, y1: 402, x2: 194, y2: 402});
+
+    ctx.moveTo(258, 402);
+    ctx.lineTo(290, 402);
+    mazeWalls.push({x1: 258, y1: 402, x2: 290, y2: 402});
+
+    ctx.moveTo(306, 402);
+    ctx.lineTo(322, 402);
+    mazeWalls.push({x1: 306, y1: 402, x2: 322, y2: 402});
+
+    ctx.moveTo(370, 402);
+    ctx.lineTo(418, 402);
+    mazeWalls.push({x1: 370, y1: 402, x2: 418, y2: 402});
+
+    ctx.moveTo(434, 402);
+    ctx.lineTo(450, 402);
+    mazeWalls.push({x1: 434, y1: 402, x2: 450, y2: 402});
+
+    ctx.moveTo(2, 418);
+    ctx.lineTo(34, 418);
+    mazeWalls.push({x1: 2, y1: 418, x2: 34, y2: 418});
+
     ctx.moveTo(66, 418);
-    ctx.lineTo(66, 482);
+    ctx.lineTo(98, 418);
+    mazeWalls.push({x1: 66, y1: 418, x2: 98, y2: 418});
 
-    // <line x1="82" y1="18" x2="82" y2="50" />
-    ctx.moveTo(82, 18);
+    ctx.moveTo(130, 418);
+    ctx.lineTo(162, 418);
+    mazeWalls.push({x1: 130, y1: 418, x2: 162, y2: 418});
+
+    ctx.moveTo(178, 418);
+    ctx.lineTo(194, 418);
+    mazeWalls.push({x1: 178, y1: 418, x2: 194, y2: 418});
+
+    ctx.moveTo(226, 418);
+    ctx.lineTo(258, 418);
+    mazeWalls.push({x1: 226, y1: 418, x2: 258, y2: 418});
+
+    ctx.moveTo(274, 418);
+    ctx.lineTo(290, 418);
+    mazeWalls.push({x1: 274, y1: 418, x2: 290, y2: 418});
+
+    ctx.moveTo(322, 418);
+    ctx.lineTo(338, 418);
+    mazeWalls.push({x1: 322, y1: 418, x2: 338, y2: 418});
+
+    ctx.moveTo(354, 418);
+    ctx.lineTo(402, 418);
+    mazeWalls.push({x1: 354, y1: 418, x2: 402, y2: 418});
+
+    ctx.moveTo(434, 418);
+    ctx.lineTo(466, 418);
+    mazeWalls.push({x1: 434, y1: 418, x2: 466, y2: 418});
+
+    ctx.moveTo(18, 434);
+    ctx.lineTo(50, 434);
+    mazeWalls.push({x1: 18, y1: 434, x2: 50, y2: 434});
+
+    ctx.moveTo(98, 434);
+    ctx.lineTo(114, 434);
+    mazeWalls.push({x1: 98, y1: 434, x2: 114, y2: 434});
+
+    ctx.moveTo(146, 434);
+    ctx.lineTo(178, 434);
+    mazeWalls.push({x1: 146, y1: 434, x2: 178, y2: 434});
+
+    ctx.moveTo(194, 434);
+    ctx.lineTo(226, 434);
+    mazeWalls.push({x1: 194, y1: 434, x2: 226, y2: 434});
+
+    ctx.moveTo(290, 434);
+    ctx.lineTo(322, 434);
+    mazeWalls.push({x1: 290, y1: 434, x2: 322, y2: 434});
+
+    ctx.moveTo(402, 434);
+    ctx.lineTo(418, 434);
+    mazeWalls.push({x1: 402, y1: 434, x2: 418, y2: 434});
+
+    ctx.moveTo(2, 450);
+    ctx.lineTo(18, 450);
+    mazeWalls.push({x1: 2, y1: 450, x2: 18, y2: 450});
+
+    ctx.moveTo(50, 450);
+    ctx.lineTo(66, 450);
+    mazeWalls.push({x1: 50, y1: 450, x2: 66, y2: 450});
+
+    ctx.moveTo(98, 450);
+    ctx.lineTo(114, 450);
+    mazeWalls.push({x1: 98, y1: 450, x2: 114, y2: 450});
+
+    ctx.moveTo(130, 450);
+    ctx.lineTo(162, 450);
+    mazeWalls.push({x1: 130, y1: 450, x2: 162, y2: 450});
+
+    ctx.moveTo(178, 450);
+    ctx.lineTo(194, 450);
+    mazeWalls.push({x1: 178, y1: 450, x2: 194, y2: 450});
+
+    ctx.moveTo(226, 450);
+    ctx.lineTo(242, 450);
+    mazeWalls.push({x1: 226, y1: 450, x2: 242, y2: 450});
+
+    ctx.moveTo(274, 450);
+    ctx.lineTo(290, 450);
+    mazeWalls.push({x1: 274, y1: 450, x2: 290, y2: 450});
+
+    ctx.moveTo(354, 450);
+    ctx.lineTo(402, 450);
+    mazeWalls.push({x1: 354, y1: 450, x2: 402, y2: 450});
+
+    ctx.moveTo(418, 450);
+    ctx.lineTo(466, 450);
+    mazeWalls.push({x1: 418, y1: 450, x2: 466, y2: 450});
+
+
+    ctx.moveTo(18, 466);
+    ctx.lineTo(50, 466);
+    mazeWalls.push({x1: 18, y1: 466, x2: 50, y2: 466});
+
+    ctx.moveTo(98, 466);
+    ctx.lineTo(146, 466);
+    mazeWalls.push({x1: 98, y1: 466, x2: 146, y2: 466});
+
+    ctx.moveTo(178, 466);
+    ctx.lineTo(210, 466);
+    mazeWalls.push({x1: 178, y1: 466, x2: 210, y2: 466});
+
+    ctx.moveTo(226, 466);
+    ctx.lineTo(290, 466);
+    mazeWalls.push({x1: 226, y1: 466, x2: 290, y2: 466});
+
+    ctx.moveTo(322, 466);
+    ctx.lineTo(354, 466);
+    mazeWalls.push({x1: 322, y1: 466, x2: 354, y2: 466});
+
+    ctx.moveTo(370, 466);
+    ctx.lineTo(402, 466);
+    mazeWalls.push({x1: 370, y1: 466, x2: 402, y2: 466});
+
+    ctx.moveTo(434, 466);
+    ctx.lineTo(450, 466);
+    mazeWalls.push({x1: 434, y1: 466, x2: 450, y2: 466});
+
+    ctx.moveTo(18, 482);
+    ctx.lineTo(50, 482);
+    mazeWalls.push({x1: 18, y1: 482, x2: 50, y2: 482});
+
+    ctx.moveTo(82, 482);
+    ctx.lineTo(114, 482);
+    mazeWalls.push({x1: 82, y1: 482, x2: 114, y2: 482});
+
+    ctx.moveTo(146, 482);
+    ctx.lineTo(178, 482);
+    mazeWalls.push({x1: 146, y1: 482, x2: 178, y2: 482});
+
+    ctx.moveTo(194, 482);
+    ctx.lineTo(226, 482);
+    mazeWalls.push({x1: 194, y1: 482, x2: 226, y2: 482});
+
+    ctx.moveTo(258, 482);
+    ctx.lineTo(290, 482);
+    mazeWalls.push({x1: 258, y1: 482, x2: 290, y2: 482});
+    //fge
+
+
+    ctx.moveTo(2, 2); 
+    ctx.lineTo(2, 482);
+    mazeWalls.push({x1: 2, y1: 2, x2: 2, y2: 482});
+
+    ctx.moveTo(18, 18); 
+    ctx.lineTo(18, 34);
+    mazeWalls.push({x1: 18, y1: 18, x2: 18, y2: 34});
+
+    ctx.moveTo(18, 82); 
+    ctx.lineTo(18, 130);
+    mazeWalls.push({x1: 18, y1: 82, x2: 18, y2: 130});
+
+    ctx.moveTo(18, 162); 
+    ctx.lineTo(18, 178);
+    mazeWalls.push({x1: 18, y1: 162, x2: 18, y2: 178});
+
+    ctx.moveTo(18, 194); 
+    ctx.lineTo(18, 226);
+    mazeWalls.push({x1: 18, y1: 194, x2: 18, y2: 226});
+
+    ctx.moveTo(18, 242); 
+    ctx.lineTo(18, 274);
+    mazeWalls.push({x1: 18, y1: 242, x2: 18, y2: 274});
+
+    ctx.moveTo(18, 290); 
+    ctx.lineTo(18, 306);
+    mazeWalls.push({x1: 18, y1: 290, x2: 18, y2: 306});
+
+    ctx.moveTo(18, 338); 
+    ctx.lineTo(18, 370);
+    mazeWalls.push({x1: 18, y1: 338, x2: 18, y2: 370});
+
+    ctx.moveTo(18, 386); 
+    ctx.lineTo(18, 402);
+    mazeWalls.push({x1: 18, y1: 386, x2: 18, y2: 402});
+
+    ctx.moveTo(34, 2); 
+    ctx.lineTo(34, 18);
+    mazeWalls.push({x1: 34, y1: 2, x2: 34, y2: 18});
+
+    ctx.moveTo(34, 66); 
+    ctx.lineTo(34, 82);
+    mazeWalls.push({x1: 34, y1: 66, x2: 34, y2: 82});
+
+    ctx.moveTo(34, 146); 
+    ctx.lineTo(34, 162);
+    mazeWalls.push({x1: 34, y1: 146, x2: 34, y2: 162});
+
+    ctx.moveTo(34, 178); 
+    ctx.lineTo(34, 210);
+    mazeWalls.push({x1: 34, y1: 178, x2: 34, y2: 210});
+
+    ctx.moveTo(34, 242); 
+    ctx.lineTo(34, 258);
+    mazeWalls.push({x1: 34, y1: 242, x2: 34, y2: 258});
+
+    ctx.moveTo(34, 274); 
+    ctx.lineTo(34, 322);
+    mazeWalls.push({x1: 34, y1: 274, x2: 34, y2: 322});
+
+    ctx.moveTo(34, 354); 
+    ctx.lineTo(34, 386);
+    mazeWalls.push({x1: 34, y1: 354, x2: 34, y2: 386});
+
+    ctx.moveTo(34, 402); 
+    ctx.lineTo(34, 418);
+    mazeWalls.push({x1: 34, y1: 402, x2: 34, y2: 418});
+
+    ctx.moveTo(34, 434); 
+    ctx.lineTo(34, 466);
+    mazeWalls.push({x1: 34, y1: 434, x2: 34, y2: 466});
+
+    ctx.moveTo(50, 18); 
+    ctx.lineTo(50, 34);
+    mazeWalls.push({x1: 50, y1: 18, x2: 50, y2: 34});
+
+    ctx.moveTo(50, 82); 
+    ctx.lineTo(50, 114);
+    mazeWalls.push({x1: 50, y1: 82, x2: 50, y2: 114});
+
+    ctx.moveTo(50, 130); 
+    ctx.lineTo(50, 146);
+    mazeWalls.push({x1: 50, y1: 130, x2: 50, y2: 146});
+
+    ctx.moveTo(50, 210); 
+    ctx.lineTo(50, 242);
+    mazeWalls.push({x1: 50, y1: 210, x2: 50, y2: 242});
+
+    ctx.moveTo(50, 258); 
+    ctx.lineTo(50, 274);
+    mazeWalls.push({x1: 50, y1: 258, x2: 50, y2: 274});
+
+    ctx.moveTo(50, 306); 
+    ctx.lineTo(50, 370);
+    mazeWalls.push({x1: 50, y1: 306, x2: 50, y2: 370});
+
+    ctx.moveTo(50, 386); 
+    ctx.lineTo(50, 434);
+    mazeWalls.push({x1: 50, y1: 386, x2: 50, y2: 434});
+
+    ctx.moveTo(66, 34); 
+    ctx.lineTo(66, 82);
+    mazeWalls.push({x1: 66, y1: 34, x2: 66, y2: 82});
+
+    ctx.moveTo(66, 114); 
+    ctx.lineTo(66, 162);
+    mazeWalls.push({x1: 66, y1: 114, x2: 66, y2: 162});
+
+    ctx.moveTo(66, 178); 
+    ctx.lineTo(66, 194);
+    mazeWalls.push({x1: 66, y1: 178, x2: 66, y2: 194});
+
+    ctx.moveTo(66, 226); 
+    ctx.lineTo(66, 258);
+    mazeWalls.push({x1: 66, y1: 226, x2: 66, y2: 258});
+
+    ctx.moveTo(66, 274); 
+    ctx.lineTo(66, 322);
+    mazeWalls.push({x1: 66, y1: 274, x2: 66, y2: 322});
+
+    ctx.moveTo(66, 338); 
+    ctx.lineTo(66, 386);
+    mazeWalls.push({x1: 66, y1: 338, x2: 66, y2: 386});
+
+    ctx.moveTo(66, 418); 
+    ctx.lineTo(66, 482);
+    mazeWalls.push({x1: 66, y1: 418, x2: 66, y2: 482});
+
+    ctx.moveTo(82, 18); 
     ctx.lineTo(82, 50);
+    mazeWalls.push({x1: 82, y1: 18, x2: 82, y2: 50});
 
     // <line x1="82" y1="130" x2="82" y2="146" />
     ctx.moveTo(82, 130);
@@ -940,34 +1434,6 @@ function drawMaze() {
     // <line x1="258" y1="466" x2="258" y2="482" />
     ctx.moveTo(258, 466);
     ctx.lineTo(258, 482);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     //odjlkjlj
 

@@ -2,7 +2,7 @@ body{
     margin: 0;
     overflow: hidden;
     position: relative;
-    /*background-image: url('../img/bg_start.gif');*/
+    background-image: url('../img/bg_start.gif');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
