@@ -1,26 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <title>Labirint - Cat Adventure</title>
 </head>
 
 <body onload="getRandomScript()">
     <div class="center-div">
         <!--<img class="cat-gif" src="img/cat.gif" alt="Cat gif">-->
-        <h1>CAT ADVENTURE</h1>
+        <h1>Cat Adventure</h1>
 
         <!--here it shows startup of a game (welcome page)-->
         <div id="page1-welcome">
             <div class="button-container">
                 <a href="game.html"><button class="play">PLAY</button></a>
-                <button class="help">HELP</button>
+                <button class="help" id="helpButton">HOW TO</button>
             </div>
         </div>
     </div>
 
-    
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Add event listener to the "Help" button
+        document.getElementById('helpButton').addEventListener('click', function () {
+            Swal.fire({
+                title: 'How to Play?',
+                text: 'Cat escaped in wild! Help her find some mice so she does not starve.',
+                icon: 'info',
+                confirmButtonText: 'start',
+                backdrop: false, // Disable the backdrop
+                allowOutsideClick: true, // Allow closing the popup by clicking outside
+                allowEscapeKey: true, // Allow closing the popup with the Escape key
+                allowEnterKey: true, // Allow closing the popup with the Enter key
+                customClass: {
+                    popup: 'custom-swal-popup'
 
+                }
+            });
+        });
+
+        // Add custom CSS to adjust the z-index of the SweetAlert2 modal
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .custom-swal-popup {
+                z-index: 9999 !important; /* Ensure the modal is above other elements */
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
+
 </html>
