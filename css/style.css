@@ -47,6 +47,7 @@ body::before {
 
 h1 {
     font-size: 50px;
+    text-shadow: 2px 2px 4px #000000
 }
 
 /* Gif macke */
@@ -70,7 +71,6 @@ h1 {
 
 /* PLAY and HELP buttons */
 button {
-    height: 100%;
     width: 500px;
     border-radius: 10px; /* Make the buttons rounded */
     background-color: rgb(124, 175, 140); /* Button color */
@@ -78,6 +78,7 @@ button {
     border: none;
     font-size: 35px; /* Font size */
     transition: background-color 0.3s ease;
+    padding: 2px;
 }
 
 /* Style for hover effect */
@@ -96,7 +97,7 @@ button:hover {
 /* Override the title style */
 .swal2-title {
     color: rgb(30, 54, 32); /* Tomato color */
-    font-size: 24px;
+    font-size: 15px;
 }
 
 /* Override the content text style */

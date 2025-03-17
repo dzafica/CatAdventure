@@ -9,9 +9,23 @@ body {
     height: 100vh;
 }
 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure it's above the background image but below other content */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); /* Add an inset shadow for depth */
+}
+
 #wrapper {
     width: 900px;
     margin: 50px auto;
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
 }
 
 #main {
@@ -21,9 +35,11 @@ body {
 }
 
 .game-name {
-    color: rgb(232 180 102);
+    font-family: "Lucida Handwriting", Times, serif;
+    color: rgb(92, 132, 104);
     font-size: 50px;
     text-align: left;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .center-div {
@@ -32,7 +48,7 @@ body {
     margin-top: 3px;
     border: 4px solid rgb(124, 175, 140);
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
 }
 
@@ -61,8 +77,35 @@ body {
     background-color: #cc0000; /* Darker red on hover */
 }
 
-
 .red-line {
     stroke: red; /* Change the stroke color to red */
     stroke-width: 2; /* Optional: Adjust the stroke width */
+}
+
+/*SWEET ALERT*/
+/* Override the popup background and border */
+.swal2-popup {
+    background-color: rgb(131, 183, 136); /* Darker shade on hover */
+    border-radius: 10px;
+    border: 5px solid rgb(63, 141, 71);
+}
+
+/* Override the title style */
+.swal2-title {
+    color: rgb(30, 54, 32); /* Tomato color */
+    font-size: 15px;
+}
+
+/* Override the content text style */
+.swal2-content {
+    color: rgb(30, 54, 32);
+    font-size: 16px;
+}
+
+/* Override the confirm button style */
+.swal2-confirm {
+    background-color: rgb(30, 54, 32); /* Green */
+    color: rgb(63, 141, 71);
+    border-radius: 10px;
+    padding: 10px 20px;
 }
