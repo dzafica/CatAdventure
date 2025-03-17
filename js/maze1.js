@@ -4,7 +4,7 @@ var c = document.getElementById('canvas').getContext('2d');
 var W = 804, H = 484;
 
 //game
-var gameSpeed = 26;
+var gameSpeed = 23;
 var loopCount = 0;
 var gameStarted, gameOver;
 
@@ -25,6 +25,7 @@ whiteCatImage.src = 'img/whiteCat.png'; // Path to your white cat image
 
 var grayCatImage = new Image();
 grayCatImage.src = 'img/grayCat.png'; // Path to your gray cat image
+
 
 var catImage; // This will hold the randomly selected cat image
 
@@ -50,8 +51,11 @@ var mice = [
     { x: 314, y: 106, targetX1: 314, targetX2: 346, speed: 1, movingRight: true, caught: false }, // Mouse 2
     { x: 218, y: 186, targetX1: 202, targetX2: 218, speed: 1, movingRight: true, caught: false }, // Mouse 3
     { x: 10, y: 378, targetY1: 378, targetY2: 442, speed: 1, movingDown: true, caught: false },    // Mouse 4 (vertical)
-    { x: 186, y: 330, targetY1: 330, targetY2: 346, speed: 1, movingDown: true, caught: false }   // Mouse 5 (vertical)
-
+    { x: 186, y: 330, targetY1: 330, targetY2: 346, speed: 1, movingDown: true, caught: false },   // Mouse 5 (vertical)
+    { x: 500, y: 200, targetX1: 480, targetX2: 500, speed: 1, movingRight: true, caught: false },  // Mouse 6 (new horizontal mouse)
+    { x: 395, y: 100, targetY1: 75, targetY2: 110, speed: 1, movingDown: true, caught: false },    // Mouse 7 (new vertical mouse)
+    { x: 620, y: 235, targetX1: 580, targetX2: 620, speed: 1, movingRight: true, caught: false },  // Mouse 8 (new horizontal mouse)
+    { x: 698, y: 290, targetY1: 280, targetY2: 310, speed: 1, movingDown: true, caught: false }    // Mouse 9 (new vertical mouse)
 ];
 var miceCaught = 0; // Counter for caught mice
 
@@ -149,7 +153,52 @@ function checkMiceCollision() {
 function checkWinCondition() {
     if (playerX === 410 && playerY === 482 && !gameOver) {
         gameOver = true;
-        alert(`You caught ${miceCaught} mice! Congratulations, you won!`);
+
+        // Trigger SweetAlert
+        Swal.fire({
+            title: 'Congratulations!',
+            text: `You caught ${miceCaught} mice out! You won!`,
+            icon: 'success',
+            confirmButtonText: 'Play Again',
+            customClass: {
+                popup: 'custom-swal-popup',
+                confirmButton: 'custom-swal-confirm-button'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Reset the game or redirect to the start page
+                window.location.reload(); // Reload the page to restart the game
+            }
+        });
+        // Add custom CSS to adjust the z-index of the SweetAlert2 modal and style the button and icon
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .custom-swal-popup {
+                z-index: 9999 !important; /* Ensure the modal is above other elements */
+            }
+
+            /* Customize the confirm button size */
+            .custom-swal-confirm-button {
+                width: 200px !important; /* Adjust the width */
+                height: 50px !important; /* Adjust the height */
+                font-size: 20px !important; /* Adjust the font size */
+            }
+
+            /* Customize the icon and its circle background */
+            .custom-swal-icon {
+                color: #1e3620 !important; /* Change the icon color to #1e3620 */
+                border-color: #1e3620 !important; /* Change the circle border color */
+            }
+
+            .custom-swal-icon .swal2-icon-content {
+                color: #1e3620 !important; /* Ensure the icon content (i) is also #1e3620 */
+            }
+
+            .custom-swal-icon.swal2-info {
+                background-color: rgba(30, 54, 32, 0.2) !important; /* Change the circle background color */
+            }
+        `;
+        document.head.appendChild(style);
     }
 }
 
