@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <title>Labirint - Cat Adventure</title>
+    <link rel="icon" type="image/png" href="img/grayCat.png">
+    <title>Cat Adventure</title>
 </head>
 
 <body onload="getRandomScript()">
     <div class="center-div">
         <!--<img class="cat-gif" src="img/cat.gif" alt="Cat gif">-->
-        <h1>Cat Adventure</h1>
+        <h1><span id="creditsButton" style="cursor: pointer;">C</span>at Adventure</h1>
 
         <!--here it shows startup of a game (welcome page)-->
         <div id="page1-welcome">
             <div class="button-container">
-                <a href="game.html"><button class="play">PLAY</button></a>
-                <button class="help" id="helpButton">HOW TO</button>
+                <a href="game.html"><button class="play">play</button></a>
+                <button class="help" id="helpButton">how to</button>
             </div>
         </div>
     </div>
@@ -26,6 +27,28 @@
     <!-- SweetAlert JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        // Add event listener to the "C" in "Cat Adventure"
+        document.getElementById('creditsButton').addEventListener('click', function () {
+            Swal.fire({
+                title: 'Credits Time!',
+                html: `
+                    <p>Game developed by <strong>Anida Džafić</strong></p>
+                `,
+                icon: 'info',
+                confirmButtonText: 'Close',
+                confirmButtonColor: '#1e3620', // Customize the button color
+                backdrop: false, // Disable the backdrop
+                allowOutsideClick: true, // Allow closing the popup by clicking outside
+                allowEscapeKey: true, // Allow closing the popup with the Escape key
+                allowEnterKey: true, // Allow closing the popup with the Enter key
+                customClass: {
+                    popup: 'custom-swal-popup',
+                    confirmButton: 'custom-swal-confirm-button',
+                    icon: 'custom-swal-icon'
+                }
+            });
+        });
+
         // Add event listener to the "Help" button
         document.getElementById('helpButton').addEventListener('click', function () {
             Swal.fire({
@@ -33,22 +56,50 @@
                 text: 'Cat escaped in wild! Help her find some mice so she does not starve.',
                 icon: 'info',
                 confirmButtonText: 'start',
+                confirmButtonColor: '#1e3620', // Customize the button color
                 backdrop: false, // Disable the backdrop
                 allowOutsideClick: true, // Allow closing the popup by clicking outside
                 allowEscapeKey: true, // Allow closing the popup with the Escape key
                 allowEnterKey: true, // Allow closing the popup with the Enter key
                 customClass: {
-                    popup: 'custom-swal-popup'
-
+                    popup: 'custom-swal-popup',
+                    confirmButton: 'custom-swal-confirm-button',
+                    icon: 'custom-swal-icon'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to game.html when the "start" button is clicked
+                    window.location.href = 'game.html';
                 }
             });
         });
 
-        // Add custom CSS to adjust the z-index of the SweetAlert2 modal
+        // Add custom CSS to adjust the z-index of the SweetAlert2 modal and style the button and icon
         const style = document.createElement('style');
         style.innerHTML = `
             .custom-swal-popup {
                 z-index: 9999 !important; /* Ensure the modal is above other elements */
+            }
+
+            /* Customize the confirm button size */
+            .custom-swal-confirm-button {
+                width: 200px !important; /* Adjust the width */
+                height: 50px !important; /* Adjust the height */
+                font-size: 20px !important; /* Adjust the font size */
+            }
+
+            /* Customize the icon and its circle background */
+            .custom-swal-icon {
+                color: #1e3620 !important; /* Change the icon color to #1e3620 */
+                border-color: #1e3620 !important; /* Change the circle border color */
+            }
+
+            .custom-swal-icon .swal2-icon-content {
+                color: #1e3620 !important; /* Ensure the icon content (i) is also #1e3620 */
+            }
+
+            .custom-swal-icon.swal2-info {
+                background-color: rgba(30, 54, 32, 0.2) !important; /* Change the circle background color */
             }
         `;
         document.head.appendChild(style);
