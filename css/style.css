@@ -38,8 +38,8 @@ body::before {
     padding: 20px;
     text-align: center;
     font-family: "Lucida Handwriting", Times, serif;
-    width: 50%;  /* Width diva */
-    height: 50%;  /* Height diva */
+    width: 30%;  /* Width diva */
+    height: 30%;  /* Height diva */
     position: relative;
     color: rgb(92, 132, 104);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
@@ -61,6 +61,7 @@ h1 {
 
 /*div for buttons */
 .button-container {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
