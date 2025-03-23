@@ -13,13 +13,13 @@
 <body onload="getRandomScript()">
     <div class="center-div">
         <!--<img class="cat-gif" src="img/cat.gif" alt="Cat gif">-->
-        <h1><span id="creditsButton" style="cursor: pointer;">C</span>at Adventure</h1>
+        <h1><span id="creditsButton" style="cursor: pointer;">C</span>at adventure</h1>
 
         <!--here it shows startup of a game (welcome page)-->
         <div id="page1-welcome">
             <div class="button-container">
-                <a href="game.html"><button class="play">play</button></a>
-                <button class="help" id="helpButton">how to</button>
+                <a href="game.html"><button class="play">Play</button></a>
+                <button class="help" id="helpButton">How to</button>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
         // Add event listener to the "C" in "Cat Adventure"
         document.getElementById('creditsButton').addEventListener('click', function () {
             Swal.fire({
-                title: 'Credits Time!',
+                title: 'Credits time!',
                 html: `
                     <p>Game developed by <strong>Anida Džafić</strong></p>
                 `,
@@ -49,13 +49,14 @@
             });
         });
 
-        // Add event listener to the "Help" button
+        
+        //Add event listener to the "Help" button
         document.getElementById('helpButton').addEventListener('click', function () {
             Swal.fire({
-                title: 'How to Play?',
+                title: 'How to play?',
                 text: 'Cat escaped in wild! Help her find some mice so she does not starve.',
                 icon: 'info',
-                confirmButtonText: 'start',
+                confirmButtonText: 'Okay',
                 confirmButtonColor: '#1e3620', // Customize the button color
                 backdrop: false, // Disable the backdrop
                 allowOutsideClick: true, // Allow closing the popup by clicking outside
@@ -66,12 +67,7 @@
                     confirmButton: 'custom-swal-confirm-button',
                     icon: 'custom-swal-icon'
                 }
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Redirect to game.html when the "start" button is clicked
-                    window.location.href = 'game.html';
-                }
-            });
+            })
         });
 
         // Add custom CSS to adjust the z-index of the SweetAlert2 modal and style the button and icon
