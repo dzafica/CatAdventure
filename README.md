@@ -12,6 +12,8 @@
 
   Mice: They move back and forth—catch them by touching them with the cat.
 
+  Hint: Function click ctrl+Y or ctrl+y shows you true path, but be cairful, you can use it only 3 times.
+
 ---
 
 **Features**
