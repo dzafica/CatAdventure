@@ -18,8 +18,6 @@
 
   Randomly selected cat: Play as a white or gray cat.
 
-  Dynamic maze layout: A unique maze experience every time.
-
   Multiple moving mice: Catch them all for a higher score!
 
   Victory popup: Celebrate your win with a SweetAlert popup showing your score.
