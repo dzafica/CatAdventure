@@ -1,5 +1,7 @@
 var c = document.getElementById('canvas').getContext('2d');
 
+
+
 //canvas
 var W = 804, H = 484;
 
@@ -44,6 +46,15 @@ var resultsName = [], resultsDiff = [];
 var interval = init();
 
 var miceCaught = 0; // Counter for caught mice
+
+var isFollowingReversePath = false; // Add this at the top of your script
+var reversePathIndex = 0; // Track the current index in the reversed path
+var reversePathSpeed = 5; // Speed in milliseconds (lower = faster)
+
+
+//shows path
+var hintCounter = 0; // Counter for the number of times the hint is used
+var hintActive = false; // Flag to check if the hint is currently active
 
 // Mice
 var mice = [
@@ -132,6 +143,18 @@ function update() {
     restrictPlayer();
     checkMiceCollision(); // Check for collisions with mice
     checkWinCondition(); // Check if the player has won
+
+    // Handle the reversed path movement
+    if (isFollowingReversePath) {
+        if (reversePathIndex < reversedPoints.length) {
+            const [x, y] = reversedPoints[reversePathIndex];
+            playerX = x;
+            playerY = y;
+            reversePathIndex++;
+        } else {
+            isFollowingReversePath = false; // Stop following the path once it's done
+        }
+    }
 }
 
 function checkMiceCollision() {
@@ -157,9 +180,9 @@ function checkWinCondition() {
         // Trigger SweetAlert
         Swal.fire({
             title: 'Congratulations!',
-            text: `You caught ${miceCaught} mice out! You won!`,
+            text: `You caught ${miceCaught} mice out and found path! You won!`,
             icon: 'success',
-            confirmButtonText: 'Play Again',
+            confirmButtonText: 'Play again',
             customClass: {
                 popup: 'custom-swal-popup',
                 confirmButton: 'custom-swal-confirm-button'
@@ -321,7 +344,7 @@ function changeDifficulty(a) {
 function render() {
     drawBG();
     drawMaze();
-    if (hintDraw) drawMazeSolution();
+    if (hintDraw) drawMazeSolution(); // Draw the hint path if active
     drawPlayer();
     drawMice(); // Draw all mice
 }
@@ -395,7 +418,7 @@ function drawMaze() {
 }
 
 function drawMazeSolution() {
-	c.strokeStyle = "purple";
+	/*c.strokeStyle = "purple";
 	c.lineWidth = 2;
 
 	c.beginPath();
@@ -406,7 +429,36 @@ function drawMazeSolution() {
 	}
 
 	c.stroke();
-	c.closePath();
+	c.closePath();*/
+
+    /*if (hintDraw) {
+        c.strokeStyle = "blue"; // Set the stroke color to blue
+        c.lineWidth = 2;
+
+        c.beginPath();
+        c.moveTo(mazeSolutinPathX[0] + mazeX, mazeSolutinPathY[0] + mazeY); // Add maze offset
+
+        for (var i = 1; i < mazeSolutinPathX.length; i++) {
+            c.lineTo(mazeSolutinPathX[i] + mazeX, mazeSolutinPathY[i] + mazeY); // Add maze offset
+        }
+
+        c.stroke();
+        c.closePath();
+    }*/
+        if (hintDraw) {
+            c.strokeStyle = "blue"; // Set the stroke color to blue
+            c.lineWidth = 2;
+    
+            c.beginPath();
+            c.moveTo(mazeSolutinPathX[0] + mazeX, mazeSolutinPathY[0] + mazeY); // Add maze offset
+    
+            for (var i = 1; i < mazeSolutinPathX.length; i++) {
+                c.lineTo(mazeSolutinPathX[i] + mazeX, mazeSolutinPathY[i] + mazeY); // Add maze offset
+            }
+    
+            c.stroke();
+            c.closePath();
+        }
 }
 /** RENDER **/
 
@@ -1337,4 +1389,54 @@ document.onkeyup = function (e) {
 	}
 };
 
+
+//shows solution
+// Extract and reverse the polyline coordinates
+const polylinePoints = "410,482 410,458 362,458 362,442 346,442 346,474 314,474 314,458 282,458 282,410 218,410 218,394 234,394 234,362 218,362 218,346 186,346 186,330 154,330 154,362 90,362 90,378 58,378 58,362 42,362 42,394 26,394 26,426 58,426 58,410 74,410 74,474 58,474 58,442 10,442 10,378 26,378 26,314 10,314 10,298 26,298 26,282 58,282 58,250 10,250 10,218 26,218 26,202 10,202 10,170 42,170 42,154 26,154 26,90 42,90 42,138 58,138 58,106 74,106 74,90 90,90 90,106 106,106 106,122 122,122 122,154 106,154 106,202 170,202 170,170 202,170 202,186 218,186 218,202 234,202 234,186 250,186 250,202 282,202 282,186 298,186 298,154 314,154 314,138 330,138 330,186 346,186 346,170 378,170 378,138 442,138 442,154 458,154 458,138 490,138 490,154 506,154 506,122 522,122 522,106 506,106 506,90 490,90 490,26 522,26 522,10 442,10 442,26 394,26 394,42 378,42 378,58 426,58 426,106 410,106 410,90 394,90 394,74 378,74 378,90 346,90 346,106 314,106 314,42 362,42 362,10 394,10 394,2";
+const pointsArray = polylinePoints.split(" ").map(point => point.split(",").map(Number));
+const reversedPoints = pointsArray.reverse();
+
+// Function to move the cat along the reversed path
+function followReversePath() {
+    isFollowingReversePath = true; // Start following the reversed path
+    reversePathIndex = 0; // Reset the index
+
+    function move() {
+        if (reversePathIndex < reversedPoints.length) {
+            const [x, y] = reversedPoints[reversePathIndex];
+            playerX = x;
+            playerY = y;
+            reversePathIndex++;
+            setTimeout(move, reversePathSpeed); // Use the speed variable here
+        } else {
+            isFollowingReversePath = false; // Stop following the path once it's done
+        }
+    }
+
+    move(); // Start the movement
+}
+
+function showHint() {
+    hintDraw = true; // Enable drawing the hint path
+    setTimeout(function() {
+        hintDraw = false; // Disable drawing the hint path after 3 seconds
+        hintActive = false; // Reset the hint active flag
+    }, 100); // 3000 milliseconds = 3 seconds
+}
+
+//when you click ctrl+f
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'y' || event.ctrlKey && event.key === 'Y') {
+        if (hintCounter < 3 && !hintActive) {
+            hintCounter++;
+            hintActive = true;
+            showHint();
+        }
+    }
+});
+
+
+
+// Add event listener to the button
+document.getElementById("reversePathButton").addEventListener("click", followReversePath);
 
