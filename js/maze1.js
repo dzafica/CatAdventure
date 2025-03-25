@@ -1421,7 +1421,7 @@ function showHint() {
     setTimeout(function() {
         hintDraw = false; // Disable drawing the hint path after 3 seconds
         hintActive = false; // Reset the hint active flag
-    }, 100); // 3000 milliseconds = 3 seconds
+    }, 3000); // 3000 milliseconds = 3 seconds
 }
 
 //when you click ctrl+f
